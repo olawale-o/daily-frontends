@@ -48,6 +48,7 @@ body {
 
 .horizontal img:not(:first-child):hover {
   margin-left: -2rem;
+  transform: rotate(-360deg);
 }
 
 .vertical {
@@ -60,5 +61,5 @@ body {
 }
 
 .vertical img:not(:first-child):hover {
-  margin-top: -2rem;
+  transform: rotate(-360deg);
 }
