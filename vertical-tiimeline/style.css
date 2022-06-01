@@ -38,6 +38,18 @@ body{
   background-color: gainsboro;
 }
 
+.timeline::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gainsboro;
+  transform: translateX(-10px);
+}
+
 .timeline ul{
   list-style-type: none;
   width: 90%;
@@ -97,6 +109,13 @@ body{
   .timeline::before{
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .timeline::after {
+    left: initial;
+    right: 50%;
+    background-color: gainsboro;
+    transform: translateX(10px);
   }
 
   .timeline ul{
