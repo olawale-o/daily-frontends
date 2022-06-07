@@ -7,11 +7,7 @@ const removeActiveClass = () => {
 };
 
 const expandCard = (index) => {
-  if (!collaspsibleButtons[index].classList.contains('active')) {
-    collaspsibleButtons[index].classList.add('active');
-  } else {
-    collaspsibleButtons[index].classList.remove('active');
-  }
+  collaspsibleButtons[index].classList.toggle('active');
   // removeActiveClass();
 }
 
