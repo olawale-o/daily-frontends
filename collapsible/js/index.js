@@ -7,8 +7,8 @@ const removeActiveClass = () => {
 };
 
 const expandCard = (index) => {
-  collaspsibleButtons[index].classList.toggle('active');
   // removeActiveClass();
+  collaspsibleButtons[index].classList.toggle('active');
 }
 
 collaspsibleButtons.forEach((card, index) => card.addEventListener('click', function() {
