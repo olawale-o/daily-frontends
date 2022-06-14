@@ -37,7 +37,7 @@ const renderCalendar = () => {
   let days = "";
 
   for (let x = firstDayIndex; x >= 0; x--) {
-    days += `<div class="prev-date">${prevLastDay - x}</div>`;
+    days += `<div class="day prev-date">${prevLastDay - x}</div>`;
   }
 
   for (let i = 1; i <= lastDay; i++) {
@@ -49,7 +49,7 @@ const renderCalendar = () => {
   }
 
   for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="next-date">${j}</div>`;
+    days += `<div class="day next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
 };
