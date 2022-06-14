@@ -29,9 +29,9 @@ const renderCalendar = () => {
   ).getDay();
   const nextDays = 7 - lastDayIndex - 1;
   const monthDays = document.querySelector(".days");
-  const monthName = document.querySelector(".month h1");
+  const monthName = document.querySelector(".month__name");
   monthName.innerHTML = MONTHS[date.getMonth()];
-  const dateString = document.querySelector(".month p");
+  const dateString = document.querySelector(".month__full");
   dateString.innerHTML = date.toDateString();
 
   let days = "";
