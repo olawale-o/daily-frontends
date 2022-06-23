@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  all: unset;
+}
+
+.container {
+  width: 200px;
+  position: relative;
+  font-size: 10px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 0.38em 0;
+  background-color: #121212;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2.6em;
+}
+
+.list {
+  position: absolute;
+  text-align: center;
+  font-size: 2.2em;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms ease-out;
+}
+
+li {
+  margin-block: 0.18em;
+  padding-block: 0.45em;
+}
+
+li:nth-child(even) {
+  color: #669999;
+  background-color: #242424;
+}
+
+li:nth-child(odd) {
+  background-color: #669999;
+}
+
+.menu-1 {
+  width: 0;
+  left: 50%;
+}
+
+.dropdown:hover ~ .menu-1 {
+  max-height: 300px;
+  width: 100%;
+  left: 0;
+  perspective: 1000px;
+  perspective-origin: -50% 50%;
+}
