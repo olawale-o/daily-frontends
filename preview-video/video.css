@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 400px;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  display: block;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  video {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
