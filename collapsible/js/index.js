@@ -7,7 +7,10 @@ const removeActiveClass = () => {
 };
 
 const expandCard = (index) => {
-  // removeActiveClass();
+  collaspsibleButtons.forEach((card, index) => {
+
+  })
+  removeActiveClass();
   collaspsibleButtons[index].classList.toggle('active');
 }
 
