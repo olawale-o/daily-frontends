@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select {
+  width: 300px;
+  position: relative;
+}
+
+.select-list {
+  position: absolute;
+  display: none;
+  border-radius: 10px;
+}
+
+
+.select-list.active {
+  display: block;
+  max-height: 200px;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.select-btn {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 18px;
+}
+
+.select-item {
+  width: 100%;
+  font-size: 18px;
+}
+
+.select-option {
+  width: 100%;
+  background: grey;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 18px;
+}
+
+.select-option-text, .select-btn-text {
+  width: 100%;
+  font-size: 18px;
+  text-align: left;
+}
