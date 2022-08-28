@@ -24,6 +24,7 @@ body {
   height: 20rem;
   width: 30rem;
   border: 1px solid #000;
+  border-radius: 10px;
   background: #fff;
   padding: 1rem;
   display: flex;
@@ -75,6 +76,14 @@ body {
   font-size: 1.8rem;
 }
 
+.summary {
+  font-size: 1.8rem;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 3s ease-in-out;
+}
+
 .card:hover .card-avatar {
   width: 75px;
   height: 75px;
@@ -85,4 +94,20 @@ body {
   display: block;
   opacity: 1;
   visibility: visible;
+}
+
+.card:hover .card-bio {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card:hover .card-body {
+  margin-top: 4rem;
+}
+
+.card:hover .summary {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
