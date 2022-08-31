@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 62.5%;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.cancel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 139, 123, 0.1);
+  padding: 10px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.cancel.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.line {
+  width: 4px;
+  height: 50%;
+  background-color: #F92A2A;
+  border-radius: 2px;
+  position: absolute;
+  transform: rotate(0deg);
+}
+
+.right {
+  transition: all 800ms linear;
+}
+
+.left {
+  transition: all 800ms linear;
+}
+
+.active .right {
+  transform: rotate(45deg);
+}
+
+.active .left {
+  transform: rotate(-45deg);
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  outline: none;
+  background-color: #584DE214;
+  border: none;
+  cursor: pointer;
+}
