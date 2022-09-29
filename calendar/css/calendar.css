@@ -87,7 +87,7 @@ button {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
+  width: calc(44.2rem / 7); /* width of the parent container - padding-inline i.e 45 - (0.4 - 0.4) = 44.2rem */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,12 +104,13 @@ button {
 .days .day {
   font-size: 1.4rem;
   margin: 0.3rem;
-  width: calc(37.6rem / 7);
+  width: calc(37.6rem / 7) /* 45 - (0.6 * 7)(margin of each cell * 7 day) - (0.4 * 7)(border of each cell * 7) - 0.4 (padding of the parent) */;
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);
+  align-self: stretch
 }
 
 .days .day:not(.today) {
@@ -128,7 +129,6 @@ button {
   opacity: 0.5;
 }
 
-.next-date:hover,
 .prev-date:hover {
   border-color: transparent !important;
   cursor: default !important;
@@ -137,4 +137,5 @@ button {
 
 .today {
   background-color: #167e56;
+  border: .2rem solid transparent;
 }
