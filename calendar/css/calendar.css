@@ -99,6 +99,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   padding: .2rem;
+  height: 36rem;
+  overflow-y: hidden;
 }
 
 .days .day {
