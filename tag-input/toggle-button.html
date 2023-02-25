@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Button</title>
+  <style>
+
+    .toggle_button {
+      position: relative;
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+    }
+    .toggle_button input[type="checkbox"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 100vmax;
+      appearance: none;
+      cursor: pointer;
+      transition: all 150ms ease-in-out;
+      outline: none;
+      background-color: #cdd0d0;
+    }
+
+    .toggle_button .circle {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background: #7a8b8b;
+      border-radius: 100vmax;
+      top: 60%;
+      left: -5%;
+      transform: translateY(-50%);
+      transition: all 150ms ease-in-out;
+      box-shadow: 0 2px 5px #696969;
+    }
+
+    .toggle_button .circle::before {
+      content: "OFF";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      color: #f2f2f3;
+      font-family: sans-serif;
+    }
+
+    .toggle_button input[type="checkbox"]:checked {
+      background-color: #49e20e;
+    }
+
+    .toggle_button input[type="checkbox"]:checked ~ .circle {
+      left: 50%;
+      background-color: #f2f2f3;
+    }
+
+    .toggle_button input[type="checkbox"]:checked ~ .circle::before {
+      content: "ON";
+      color: #4cbb17;
+    }
+  </style>
+</head>
+<body>
+  <label class="toggle_button">
+    <input type="checkbox" aria-label="toggle_button" />
+    <span class="circle"></span>
+  </label>
+</body>
+</html>
